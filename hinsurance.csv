@@ -1,0 +1,60 @@
+plan_name,Type,Coverage,Premium,Deductible,Coinsurance,Maximum out-of-pocket,Age,Gender,Health status,Income,Occupation
+Aarogya Plus,Individual,"Hospitalization, outpatient care, preventive care","Rs. 2,000","Rs. 5,000",10%,"Rs. 10,000",25,Male,Healthy,"Rs. 50,000",Software Engineer
+Bharti AXA Health Plus,Family,"Hospitalization, outpatient care, preventive care","Rs. 4,000","Rs. 10,000",15%,"Rs. 20,000",35,Female,Pre-existing conditions,"Rs. 75,000",Doctor
+Max Bupa Family Health Optima,Family,"Hospitalization, outpatient care, preventive care","Rs. 6,000","Rs. 15,000",20%,"Rs. 30,000",45,Male,Healthy,"Rs. 100,000",Businessman
+Star Health Optima Health Plus,Individual,"Hospitalization, outpatient care, preventive care","Rs. 3,000","Rs. 7,500",12%,"Rs. 15,000",20,Female,Healthy,"Rs. 40,000",Teacher
+Apollo Munich Health Optima,Individual,"Hospitalization, outpatient care, preventive care","Rs. 2,500","Rs. 5,000",10%,"Rs. 10,000",25,Male,Healthy,"Rs. 50,000",Engineer
+Religare Health Optima,Individual,"Hospitalization, outpatient care, preventive care","Rs. 3,000","Rs. 7,500",12%,"Rs. 15,000",30,Male,Healthy,"Rs. 60,000",Lawyer
+ICICI Lombard Health Optima,Individual,"Hospitalization, outpatient care, preventive care","Rs. 2,500","Rs. 5,000",10%,"Rs. 10,000",25,Female,Healthy,"Rs. 50,000",Banker
+HDFC Ergo Health Optima,Individual,"Hospitalization, outpatient care, preventive care","Rs. 3,000","Rs. 7,500",12%,"Rs. 15,000",30,Female,Healthy,"Rs. 60,000",Teacher
+Bajaj Allianz Health Optima,Individual,"Hospitalization, outpatient care, preventive care","Rs. 2,500","Rs. 5,000",10%,"Rs. 10,000",25,Male,Healthy,"Rs. 50,000",Engineer
+Nippon Life Health Optima,Individual,"Hospitalization, outpatient care, preventive care","Rs. 3,000","Rs. 7,500",12%,"Rs. 15,000",30,Male,Healthy,"Rs. 60,000",Lawyer
+Kotak Mahindra Health Optima,Individual,"Hospitalization, outpatient care, preventive care","Rs. 2,500","Rs. 5,000",10%,"Rs. 10,000",25,Female,Healthy,"Rs. 50,000",Banker
+SBI General Health Optima,Individual,"Hospitalization, outpatient care, preventive care","Rs. 3,000","Rs. 7,500",12%,"Rs. 15,000",30,Female,Healthy,"Rs. 60,000",Teacher
+New India Assurance Health Optima,Individual,"Hospitalization, outpatient care, preventive care","Rs. 2,500","Rs. 5,000",10%,"Rs. 10,000",25,Male,Healthy,"Rs. 50,000",Engineer
+HDFC Ergo Health Plus,Individual,"Hospitalization, outpatient care, preventive care","Rs. 2,500","Rs. 7,000",10%,"Rs. 15,000",35,Female,Healthy,"Rs. 70,000",Architect
+Tata AIG Health Insurance,Family,"Hospitalization, outpatient care, preventive care","Rs. 5,000","Rs. 12,000",15%,"Rs. 25,000",40,Male,Pre-existing conditions,"Rs. 90,000",Businessman
+Oriental Insurance Health Plus,Individual,"Hospitalization, outpatient care, preventive care","Rs. 2,500","Rs. 5,500",12%,"Rs. 12,500",28,Female,Healthy,"Rs. 55,000",Nurse
+United India Health Optima,Individual,"Hospitalization, outpatient care, preventive care","Rs. 2,200","Rs. 4,800",8%,"Rs. 9,000",23,Male,Healthy,"Rs. 45,000",Software Engineer
+Future Generali Health Protect,Family,"Hospitalization, outpatient care, preventive care","Rs. 4,500","Rs. 9,500",12%,"Rs. 18,000",33,Female,Healthy,"Rs. 70,000",Teacher
+HDFC ERGO Health Premier,Individual,"Hospitalization, outpatient care, preventive care","Rs. 4,500","Rs. 8,000",10%,"Rs. 12,500",35,Female,Healthy,"Rs. 70,000",Doctor
+Aditya Birla Activ Assure Diamond,Individual,"Hospitalization, outpatient care, preventive care","Rs. 3,500","Rs. 6,000",10%,"Rs. 10,000",28,Male,Healthy,"Rs. 55,000",IT Professional
+National Insurance Mediclaim Plus,Family,"Hospitalization, outpatient care, preventive care","Rs. 5,500","Rs. 12,000",15%,"Rs. 25,000",40,Male,Pre-existing conditions,"Rs. 90,000",Businessman
+Reliance HealthGain,Individual,"Hospitalization, outpatient care, preventive care","Rs. 2,800","Rs. 5,500",12%,"Rs. 10,500",32,Female,Healthy,"Rs. 60,000",Teacher
+Oriental Insurance Happy Family Floater,Family,"Hospitalization, outpatient care, preventive care","Rs. 4,200","Rs. 9,000",12%,"Rs. 18,000",35,Male,Healthy,"Rs. 80,000",Engineer
+HDFC Ergo Health Suraksha Gold,Individual,"Hospitalization, outpatient care, preventive care","Rs. 3,200","Rs. 6,500",10%,"Rs. 11,000",27,Female,Healthy,"Rs. 50,000",Banker
+Star Health Senior Citizen Red Carpet,Individual,"Hospitalization, outpatient care, preventive care","Rs. 5,000","Rs. 10,000",20%,"Rs. 20,000",60,Male,Pre-existing conditions,"Rs. 40,000",Retired
+United India Family Medicare Gold,Family,"Hospitalization, outpatient care, preventive care","Rs. 5,500","Rs. 12,500",15%,"Rs. 22,000",42,Female,Healthy,"Rs. 70,000",Teacher
+Max Bupa Health Recharge,Individual,"Hospitalization, outpatient care, preventive care","Rs. 2,600","Rs. 5,200",12%,"Rs. 10,400",29,Male,Healthy,"Rs. 55,000",Software Engineer
+SBI General Arogya Premier,Individual,"Hospitalization, outpatient care, preventive care","Rs. 3,800","Rs. 7,500",12%,"Rs. 15,000",33,Female,Healthy,"Rs. 65,000",Lawyer
+ICICI Lombard Complete Health,Family,"Hospitalization, outpatient care, preventive care","Rs. 6,500","Rs. 15,000",20%,"Rs. 30,000",45,Male,Pre-existing conditions,"Rs. 90,000",Businessman
+Bajaj Allianz Health Guard,Individual,"Hospitalization, outpatient care, preventive care","Rs. 2,200","Rs. 4,500",8%,"Rs. 9,000",32,Female,Healthy,"Rs. 50,000",Teacher
+Reliance General Wellness,Individual,"Hospitalization, outpatient care, preventive care","Rs. 2,800","Rs. 6,000",10%,"Rs. 12,000",28,Male,Healthy,"Rs. 60,000",Engineer
+New India Assurance Mediclaim,Family,"Hospitalization, outpatient care, preventive care","Rs. 5,000","Rs. 10,000",15%,"Rs. 20,000",35,Female,Healthy,"Rs. 70,000",Doctor
+HDFC Ergo My:Health Suraksha,Individual,"Hospitalization, outpatient care, preventive care","Rs. 2,500","Rs. 5,000",10%,"Rs. 10,000",25,Male,Healthy,"Rs. 50,000",Software Engineer
+Star Health Family Optima,Family,"Hospitalization, outpatient care, preventive care","Rs. 4,500","Rs. 9,500",12%,"Rs. 19,000",40,Female,Healthy,"Rs. 80,000",Teacher
+Oriental Insurance Health Protect,Individual,"Hospitalization, outpatient care, preventive care","Rs. 2,300","Rs. 4,800",8%,"Rs. 9,600",28,Male,Healthy,"Rs. 45,000",Banker
+United India Health Protector,Individual,"Hospitalization, outpatient care, preventive care","Rs. 3,200","Rs. 6,500",10%,"Rs. 13,000",32,Female,Healthy,"Rs. 60,000",Lawyer
+Max Bupa Health Companion,Family,"Hospitalization, outpatient care, preventive care","Rs. 4,800","Rs. 10,500",15%,"Rs. 21,000",38,Male,Pre-existing conditions,"Rs. 90,000",Businessman
+SBI General Arogya Plus,Individual,"Hospitalization, outpatient care, preventive care","Rs. 2,500","Rs. 5,500",12%,"Rs. 11,000",30,Female,Healthy,"Rs. 50,000",Engineer
+Apollo Munich Optima Restore,Individual,"Hospitalization, outpatient care, preventive care","Rs. 3,500","Rs. 7,000",10%,"Rs. 14,000",35,Male,Healthy,"Rs. 70,000",Doctor
+Bajaj Allianz Family Floater,Family,"Hospitalization, outpatient care, preventive care","Rs. 5,500","Rs. 12,000",15%,"Rs. 24,000",42,Female,Healthy,"Rs. 80,000",Engineer
+HDFC Ergo Health Suraksha Diamond,Individual,"Hospitalization, outpatient care, preventive care","Rs. 4,000","Rs. 8,500",12%,"Rs. 17,000",40,Male,Pre-existing conditions,"Rs. 90,000",Businessman
+Star Health Comprehensive,Individual,"Hospitalization, outpatient care, preventive care","Rs. 2,800","Rs. 5,500",10%,"Rs. 11,000",28,Female,Healthy,"Rs. 60,000",Teacher
+ICICI Lombard Health Shield,Individual,"Hospitalization, outpatient care, preventive care","Rs. 2,500","Rs. 5,000",8%,"Rs. 10,000",30,Male,Healthy,"Rs. 55,000",Software Engineer
+Reliance Health Insurance,Individual,"Hospitalization, outpatient care, preventive care","Rs. 3,200","Rs. 6,500",10%,"Rs. 13,000",32,Female,Healthy,"Rs. 65,000",Lawyer
+Oriental Insurance Health Protect Plus,Individual,"Hospitalization, outpatient care, preventive care","Rs. 2,800","Rs. 5,500",10%,"Rs. 11,000",30,Male,Healthy,"Rs. 50,000",Banker
+United India Super Top-up,Individual,"Hospitalization, outpatient care, preventive care","Rs. 2,200","Rs. 4,500",8%,"Rs. 9,000",28,Female,Healthy,"Rs. 40,000",Teacher
+Max Bupa Health Premia,Family,"Hospitalization, outpatient care, preventive care","Rs. 5,500","Rs. 12,500",15%,"Rs. 25,000",45,Male,Pre-existing conditions,"Rs. 85,000",Businessman
+SBI General Retail Health,Individual,"Hospitalization, outpatient care, preventive care","Rs. 3,000","Rs. 6,000",10%,"Rs. 12,000",32,Female,Healthy,"Rs. 60,000",Engineer
+New India Assurance Mediclaim Plus,Individual,"Hospitalization, outpatient care, preventive care","Rs. 2,500","Rs. 5,000",8%,"Rs. 10,000",30,Male,Healthy,"Rs. 55,000",Lawyer
+HDFC Ergo Optima Super,Family,"Hospitalization, outpatient care, preventive care","Rs. 6,200","Rs. 12,000",10%,"Rs. 24,000",40,Female,Healthy,"Rs. 80,000",Doctor
+Religare Care Freedom,Individual,"Hospitalization, outpatient care, preventive care","Rs. 3,200","Rs. 6,500",8%,"Rs. 13,000",32,Male,Pre-existing conditions,"Rs. 60,000",Engineer
+Star Health Senior Citizen Red Carpet,Individual,"Hospitalization, outpatient care, preventive care","Rs. 3,500","Rs. 7,000",10%,"Rs. 14,000",35,Female,Healthy,"Rs. 70,000",Teacher
+ICICI Lombard Health Protect Plus,Individual,"Hospitalization, outpatient care, preventive care","Rs. 2,800","Rs. 5,500",8%,"Rs. 11,000",30,Male,Healthy,"Rs. 55,000",Software Engineer
+Bajaj Allianz Health Infinity,Individual,"Hospitalization, outpatient care, preventive care","Rs. 3,200","Rs. 6,500",10%,"Rs. 13,000",32,Female,Healthy,"Rs. 65,000",Lawyer
+Max Bupa Health Premia Gold,Individual,"Hospitalization, outpatient care, preventive care","Rs. 3,500","Rs. 7,000",10%,"Rs. 14,000",35,Male,Healthy,"Rs. 75,000",Banker
+SBI General Arogya Premier,Family,"Hospitalization, outpatient care, preventive care","Rs. 6,000","Rs. 12,500",15%,"Rs. 25,000",42,Female,Pre-existing conditions,"Rs. 90,000",Businessman
+United India Individual Mediclaim,Individual,"Hospitalization, outpatient care, preventive care","Rs. 2,500","Rs. 5,000",8%,"Rs. 10,000",30,Male,Healthy,"Rs. 50,000",Teacher
+Oriental Insurance Health of Family,Family,"Hospitalization, outpatient care, preventive care","Rs. 4,500","Rs. 9,000",12%,"Rs. 18,000",38,Female,Healthy,"Rs. 75,000",Engineer
+New India Assurance Family Floater,Family,"Hospitalization, outpatient care, preventive care","Rs. 5,500","Rs. 11,500",15%,"Rs. 23,000",40,Male,Healthy,"Rs. 80,000",Doctor
