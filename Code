@@ -1,0 +1,98 @@
+import pandas as pd
+from sklearn.neighbors import NearestNeighbors
+from sklearn.metrics.pairwise import cosine_similarity
+# Load the dataset
+dataset = pd.read_csv('hinsurance.csv').rename(columns=lambda x: x.strip())
+# Replace with the path to your dataset file
+# Preprocess the 'Premium' column
+dataset['Premium'] = dataset['Premium'].str.replace('Rs. ', '').str.replace(',', '').astype(float)
+dataset['Deductible'] = dataset['Deductible'].str.replace('Rs. ', '').str.replace(',', '').astype(float)
+dataset['Maximum out-of-pocket'] = dataset['Maximum out-of-pocket'].str.replace('Rs. ', '').str.replace(',', '').astype(float)
+dataset['Income'] = dataset['Income'].str.replace('Rs. ', '').str.replace(',', '').astype(float)
+# Preprocess the 'Deductible' column
+dataset['Coinsurance'] = dataset['Coinsurance'].str.replace('Rs.', '').str.replace(',', '').str.strip()
+dataset['Coinsurance'] = dataset['Coinsurance'].apply(lambda x: '0' if not x.isdigit() else x).astype(float)
+# Drop rows with missing values
+dataset = dataset.dropna()
+
+# Encode categorical features
+dataset_encoded = pd.get_dummies(dataset, columns=['Type', 'Coverage', 'Gender', 'Health status', 'Occupation'])
+
+# Manually provide plan_name column
+plan_name_column = pd.DataFrame({'plan_name': ['Aarogya Plus', 'Bharti AXA Health Plus', 'Max Bupa Family Health Optima',
+    'Star Health Optima Health Plus', 'Apollo Munich Health Optima', 'Religare Health Optima',
+    'ICICI Lombard Health Optima', 'HDFC Ergo Health Optima', 'Bajaj Allianz Health Optima',
+    'Nippon Life Health Optima', 'Kotak Mahindra Health Optima', 'SBI General Health Optima',
+    'New India Assurance Health Optima', 'HDFC Ergo Health Plus', 'Tata AIG Health Insurance',
+    'Oriental Insurance Health Plus', 'United India Health Optima', 'Future Generali Health Protect',
+    'HDFC ERGO Health Premier', 'Aditya Birla Activ Assure Diamond', 'National Insurance Mediclaim Plus',
+    'Reliance HealthGain', 'Oriental Insurance Happy Family Floater', 'HDFC Ergo Health Suraksha Gold',
+    'Star Health Senior Citizen Red Carpet', 'United India Family Medicare Gold', 'Max Bupa Health Recharge',
+    'SBI General Arogya Premier', 'ICICI Lombard Complete Health', 'Bajaj Allianz Health Guard',
+    'Reliance General Wellness', 'New India Assurance Mediclaim', 'HDFC Ergo My:Health Suraksha',
+    'Star Health Family Optima', 'Oriental Insurance Health Protect', 'United India Health Protector',
+    'Max Bupa Health Companion', 'SBI General Arogya Plus', 'Apollo Munich Optima Restore',
+    'Bajaj Allianz Family Floater', 'HDFC Ergo Health Suraksha Diamond', 'Star Health Comprehensive',
+    'ICICI Lombard Health Shield', 'Reliance Health Insurance', 'Oriental Insurance Health Protect Plus',
+    'United India Super Top-up', 'Max Bupa Health Premia', 'SBI General Retail Health',
+    'New India Assurance Mediclaim Plus', 'HDFC Ergo Optima Super', 'Religare Care Freedom',
+    'Star Health Senior Citizen Red Carpet', 'ICICI Lombard Health Protect Plus',
+    'Bajaj Allianz Health Infinity', 'Max Bupa Health Premia Gold', 'SBI General Arogya Premier',
+    'United India Individual Mediclaim', 'Oriental Insurance Health of Family',
+    'New India Assurance Family Floater']})
+
+# Concatenate plan_name column with encoded features
+dataset_encoded = pd.concat([plan_name_column, dataset_encoded], axis=1)
+
+# Extract the feature vectors and target variable
+target_column = 'plan_name'
+X = dataset_encoded.drop(columns=target_column).values
+
+# Compute the similarity matrix
+similarity_matrix = cosine_similarity(X)
+
+# Fit the KNN model
+knn_model = NearestNeighbors(metric='cosine')
+knn_model.fit(X)
+
+# Get user input
+user_input = {
+    'Type': input('Enter the insurance type: '),
+    'Coverage': input('Enter the desired coverage: '),
+    'Premium': float(input('Enter the maximum premium you are willing to pay: ')),
+    'Deductible': float(input('Enter the maximum deductible you are willing to pay: ')),
+    'Coinsurance': float(input('Enter the maximum coinsurance percentage you are willing to pay: ')),
+    'Maximum out-of-pocket': float(input('Enter the maximum out-of-pocket expense you are willing to pay: ')),
+    'Age': int(input('Enter your age: ')),
+    'Gender': input('Enter your gender: '),
+    'Health status': input('Enter your health status: '),
+    'Income': float(input('Enter your income: ')),
+    'Occupation': input('Enter your occupation: ')
+}
+numerical_features = ['Premium', 'Deductible', 'Coinsurance', 'Maximum out-of-pocket', 'Income', 'Age']
+
+# Create a target vector for user input
+target_vector = []
+for feature in dataset_encoded.columns:
+    if feature == target_column:
+        continue
+    if feature in numerical_features:
+        std_dev = dataset_encoded[feature].std()
+        if std_dev == 0:
+            target_vector.append(0)
+        else:
+            target_vector.append((user_input.get(feature, 0) - dataset_encoded[feature].mean()) / std_dev)
+    else:
+        target_vector.append(1 if (feature + '_' + user_input.get(feature, '')) in dataset_encoded.columns else 0)
+target_vector = [target_vector]# Compute similarity between user input and existing plans
+user_similarity_scores = cosine_similarity(target_vector, X)[0]
+
+# Find the most similar plan to the user input
+most_similar_plan_index = user_similarity_scores.argmax()
+def recommend_insurance_plan(dataset, similarity_matrix, plan_index, top_n=5):
+    similarity_scores = similarity_matrix[plan_index]
+    similar_plans_indices = similarity_scores.argsort()[::-1][1:top_n + 1]
+    return dataset.iloc[similar_plans_indices]
+# Get recommendations based on the most similar plan
+recommended_plans = recommend_insurance_plan(dataset, similarity_matrix, most_similar_plan_index, top_n=5)
+print(dataset.loc[recommended_plans.index, ['plan_name', 'Coverage', 'Premium', 'Deductible']])
